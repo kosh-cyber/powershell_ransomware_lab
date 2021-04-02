@@ -42,13 +42,13 @@ try {
     $Prng.GetBytes($Salt)
     # Derive random bytes using PBKDF2 from Salt and Session
     $PBKDF2 = New-Object System.Security.Cryptography.Rfc2898DeriveBytes($session,$Salt)
-    # Get our AES key, iv and hmac key from the PBKDF2 stream
+    # Get our AES key, IV from the PBKDF2 stream
     $AESKey  = $PBKDF2.GetBytes(32)
     $AESIV   = $PBKDF2.GetBytes(16)
     # Setup our encryptor
     $AES = New-Object Security.Cryptography.AesManaged
     $Enc = $AES.CreateEncryptor($AESKey, $AESIV)
-    # Write our Salt now, then append the encrypted data
+    # Write our Salt and ensession, then append the encrypted data
     $OutputStream.Write($ensession+$Salt,0,$ensession.Length+$Salt.Length)
     $CryptoStream = New-Object System.Security.Cryptography.CryptoStream($OutputStream, $Enc, [System.Security.Cryptography.CryptoStreamMode]::Write)
     $InputStream.CopyTo($CryptoStream)
