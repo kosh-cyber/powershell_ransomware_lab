@@ -36,3 +36,4 @@ The size of these encrypted files will not exceed 2G.
 ![](https://raw.githubusercontent.com/kosh-cyber/powershell_ransomware_lab/main/decryptsession.JPG)
 ### Encrypt File List
 ![](https://raw.githubusercontent.com/kosh-cyber/powershell_ransomware_lab/main/encryptfile.JPG)
+### Don't do Evil
