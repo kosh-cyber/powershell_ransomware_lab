@@ -31,4 +31,8 @@ The size of these encrypted files will not exceed 2G.
 		RUN encrypt.ps1
 
 ### Encrypt/Decrypt File Process:
-	
+![](https://raw.githubusercontent.com/kosh-cyber/powershell_ransomware_lab/main/Encrypt-Decrypt.png)
+### Decrypt Session from remote host
+![](https://raw.githubusercontent.com/kosh-cyber/powershell_ransomware_lab/main/decryptsession.JPG)
+### Encrypt File List
+![](https://raw.githubusercontent.com/kosh-cyber/powershell_ransomware_lab/main/encryptfile.JPG)
