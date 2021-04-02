@@ -17,11 +17,11 @@ The size of these encrypted files will not exceed 2G
 		$public_key = $rsa.toXmlString($false)
 		return $private_key,$public_key
 		}
-        $privatekey,$pubkey = rsagen
+        	$privatekey,$pubkey = rsagen
 		```
 		RUN encrypt.ps1
 	Decrypt:
-		Attacker:
+		Attacker ENV :
 			python 3.7.9(python3.8 no support RSA time.clock)
 			pycrypto package
 			flask package
