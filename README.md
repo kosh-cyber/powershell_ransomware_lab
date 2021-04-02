@@ -30,5 +30,5 @@ The size of these encrypted files will not exceed 2G.
 		modify decrypt.ps1 url "http://10.10.10.4:3000/session"
 		RUN encrypt.ps1
 
-### Encrypt File structure:
-	Encrypt Session + Salt + EncryptFile
+### Encrypt/Decrypt File Process:
+	
