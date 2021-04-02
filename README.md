@@ -2,11 +2,11 @@
 ## Date: April 1 2021 
 
 ## Description:
-A Simple Powersell Script Can easier and faster to Encrypt/Decrypt File in assign extensions.
+A Simple Powersell 3.0 Script Can easier and faster to Encrypt/Decrypt File in assign extensions.
 The size of these encrypted files will not exceed 2G.
 ### How to Use:
 	Encrypt:
-		In Victim
+		In Victim ENV
 		you can use the function to genrate RSA 2048 bit key to replace encrypt.ps1 $pbkey
 		$private_key can use https://github.com/MisterDaneel/PemToXml transform to pem 
 		```
