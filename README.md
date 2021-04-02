@@ -2,7 +2,7 @@
 ## Date: April 1 2021 
 
 ## Description:
-A Simple Powersell Script Can easier and faster to Encrypt/Decrypt File in assign extensions
+A Simple Powersell Script Can easier and faster to Encrypt/Decrypt File in assign extensions \n
 The size of these encrypted files will not exceed 2G
 
 ### How to Use:
