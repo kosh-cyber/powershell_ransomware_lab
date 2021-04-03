@@ -60,6 +60,9 @@ try {
     Remove-Item $oFile
     }
     catch {
+    	  $CryptoStream.Close()
+   	  $InputStream.Close()
+          $OutputStream.Close()
           Write-Host "Abort" $Error[0]
     } 
 }
