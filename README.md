@@ -4,9 +4,6 @@
 ## Description:
 A Simple Powersell 3.0 Script Can easier and faster to Encrypt/Decrypt File in assign extensions.
 The size of these encrypted files will not exceed 2G.
-### Docker Build
-	docker build -t ransomware_lab .
-	docker run -it -p 8080:8080 ransomware_lab
 ### How to Use:
 	Encrypt:
 	```
@@ -23,6 +20,9 @@ The size of these encrypted files will not exceed 2G.
 	Decrypt:
 	$private_key can use https://github.com/MisterDaneel/PemToXml transform to pem 
 	modify script/decrypt.ps1 url "http://10.10.10.4:3000/session"		
+	Docker Build
+	docker build -t ransomware_lab .
+	docker run -it -p 8080:8080 ransomware_lab
 ### Encrypt/Decrypt File Process:
 ![](https://raw.githubusercontent.com/kosh-cyber/powershell_ransomware_lab/main/Encrypt-Decrypt.png)
 ### Decrypt Session from remote host
