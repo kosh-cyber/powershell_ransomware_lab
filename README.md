@@ -12,6 +12,7 @@ Encrypt:
 	In Victim ENV
 	you can use the function to genrate RSA 2048 bit key to replace encrypt.ps1 $pbkey
 	$private_key can use https://github.com/MisterDaneel/PemToXml transform to pem 
+	modify script/encrypt.ps1 
 	```
 	function rsagen{
 	$rsa = New-Object System.Security.Cryptography.RSACryptoServiceProvider -ArgumentList 2048
