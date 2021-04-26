@@ -20,7 +20,7 @@ docker run -it -p 8080:8080 ransomware_lab
 	```
 	use the function to genrate RSA 2048 bit key to replace script/encrypt.ps1 $pbkey
 
-Decrypt:
+	Decrypt:
 	$private_key can use https://github.com/MisterDaneel/PemToXml transform to pem 
 	modify script/decrypt.ps1 url "http://10.10.10.4:3000/session"		
 ### Encrypt/Decrypt File Process:
