@@ -8,11 +8,7 @@ The size of these encrypted files will not exceed 2G.
 docker build -t ransomware_lab .
 docker run -it -p 8080:8080 ransomware_lab
 ### How to Use:
-Encrypt:
-	In Victim ENV
-	you can use the function to genrate RSA 2048 bit key to replace encrypt.ps1 $pbkey
-	$private_key can use https://github.com/MisterDaneel/PemToXml transform to pem 
-	modify script/encrypt.ps1 
+	Encrypt:
 	```
 	function rsagen{
 	$rsa = New-Object System.Security.Cryptography.RSACryptoServiceProvider -ArgumentList 2048
@@ -22,9 +18,11 @@ Encrypt:
 	}
 		$privatekey,$pubkey = rsagen
 	```
+	use the function to genrate RSA 2048 bit key to replace script/encrypt.ps1 $pbkey
+
 Decrypt:
-	modify script/decrypt.ps1 url "http://10.10.10.4:3000/session"
-		
+	$private_key can use https://github.com/MisterDaneel/PemToXml transform to pem 
+	modify script/decrypt.ps1 url "http://10.10.10.4:3000/session"		
 ### Encrypt/Decrypt File Process:
 ![](https://raw.githubusercontent.com/kosh-cyber/powershell_ransomware_lab/main/Encrypt-Decrypt.png)
 ### Decrypt Session from remote host
